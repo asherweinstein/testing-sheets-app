@@ -1,5 +1,5 @@
 // API configuration
-const API_URL = 'https://script.google.com/a/macros/nesbittresearch.com/s/AKfycbzwsQSh6uh7B5ChjoGq52pzgJbeGkIsrBT7GZ7F8K-oqQmxa_sFx_UFb6M3-O_C_vOJ0A/exec'; // Replace with your deployed Google Apps Script web app URL
+const API_URL = 'CONFIG.API_URL'; // Replace with your deployed Google Apps Script web app URL
 
 // API functions for communicating with the backend
 const api = {

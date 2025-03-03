@@ -1,0 +1,11 @@
+# Ignore actual config with secrets
+config.js
+
+# Ignore common system files
+.DS_Store
+Thumbs.db
+
+# Ignore editor specific files
+.vscode/
+.idea/
+*.swp
