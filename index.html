@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Data App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Workplace Data Collection</h1>
+        </header>
+        
+        <main>
+            <!-- Data Entry Form -->
+            <section class="card" id="data-entry">
+                <h2>Add New Entry</h2>
+                <form id="entry-form">
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select a category</option>
+                            <!-- Categories will be loaded here via JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subcategory">Subcategory</label>
+                        <select id="subcategory" name="subcategory" required disabled>
+                            <option value="">Select a subcategory</option>
+                            <!-- Subcategories will be loaded here via JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" name="amount" required step="0.01">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">Submit</button>
+                        <button type="reset" class="btn secondary">Reset</button>
+                    </div>
+                </form>
+                
+                <div id="submit-message" class="message hidden"></div>
+            </section>
+            
+            <!-- Recent Entries -->
+            <section class="card" id="recent-entries">
+                <h2>Recent Entries</h2>
+                <div class="entries-container">
+                    <table id="entries-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Category</th>
+                                <th>Subcategory</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Entries will be loaded here via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Workplace Data App - Created with Google Sheets</p>
+        </footer>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
