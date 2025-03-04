@@ -1,12 +1,14 @@
-// API configuration
-const API_URL = 'https://script.google.com/macros/s/AKfycbzgswmWzKySqbPyDcoO2sSGg2nlZcblYzXzxSqRwthsss0HXEFaprpvtjBB7Xb7CnNVcw/exec'; // Replace with your deployed Google Apps Script web app URL
+// api.js
+const CONFIG = {
+  API_URL: 'https://script.google.com/macros/s/AKfycbzgswmWzKySqbPyDcoO2sSGg2nlZcblYzXzxSqRwthsss0HXEFaprpvtjBB7Xb7CnNVcw/exec'
+};
 
 // API functions for communicating with the backend
 const api = {
     // Get all categories
     getCategories: async function() {
         try {
-            const response = await fetch(`${API_URL}?action=getCategories`);
+            const response = await fetch(`${CONFIG.API_URL}?action=getCategories`);
             const data = await response.json();
             
             if (data.status === 'success') {
