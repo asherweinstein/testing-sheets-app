@@ -25,7 +25,7 @@ const api = {
     // Get subcategories for a specific category
     getSubcategories: async function(categoryId) {
         try {
-            const response = await fetch(`${API_URL}?action=getSubcategories&categoryId=${categoryId}`);
+            const response = await fetch(`${CONFIG.API_URL}?action=getSubcategories&categoryId=${categoryId}`);
             const data = await response.json();
             
             if (data.status === 'success') {
@@ -53,7 +53,7 @@ const api = {
                 date: entryData.date
             });
             
-            const response = await fetch(`${API_URL}?${params.toString()}`);
+            const response = await fetch(`${CONFIG.API_URL}?${params.toString()}`);
             const data = await response.json();
             
             if (data.status === 'success') {
@@ -70,7 +70,7 @@ const api = {
     // Get all entries
     getEntries: async function() {
         try {
-            const response = await fetch(`${API_URL}?action=getEntries`);
+            const response = await fetch(`${CONFIG.API_URL}?action=getEntries`);
             const data = await response.json();
             
             if (data.status === 'success') {
