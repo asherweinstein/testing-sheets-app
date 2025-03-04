@@ -1,5 +1,5 @@
 // API configuration
-const API_URL = 'CONFIG.API_URL'; // Replace with your deployed Google Apps Script web app URL
+const API_URL = 'https://script.google.com/macros/s/AKfycbzgswmWzKySqbPyDcoO2sSGg2nlZcblYzXzxSqRwthsss0HXEFaprpvtjBB7Xb7CnNVcw/exec'; // Replace with your deployed Google Apps Script web app URL
 
 // API functions for communicating with the backend
 const api = {
